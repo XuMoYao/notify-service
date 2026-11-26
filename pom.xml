@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.xmy</groupId>
+        <artifactId>xmy-framework</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath/>
+    </parent>
+
+    <artifactId>notify-service</artifactId>
+    <packaging>pom</packaging>
+    <name>notify-service</name>
+    <description>xmy 通知服务：邮件、短信等消息渠道</description>
+
+    <modules>
+        <module>notify-api</module>
+        <module>notify-core</module>
+        <module>notify-application</module>
+        <module>notify-channel-email</module>
+    </modules>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 内部模块版本统一，子模块创建后在这里补充 -->
+        </dependencies>
+    </dependencyManagement>
+</project>
