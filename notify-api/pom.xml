@@ -9,8 +9,6 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.xmy.notify</groupId>
     <artifactId>notify-api</artifactId>
-
 
 </project>

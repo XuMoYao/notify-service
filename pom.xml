@@ -11,9 +11,9 @@
         <relativePath/>
     </parent>
 
+    <groupId>com.xmy.notify</groupId>
     <artifactId>notify-service</artifactId>
     <packaging>pom</packaging>
-    <name>notify-service</name>
     <description>xmy 通知服务：邮件、短信等消息渠道</description>
 
     <modules>
@@ -26,7 +26,29 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- 内部模块版本统一，子模块创建后在这里补充 -->
+            <dependency>
+                <groupId>com.xmy.notify</groupId>
+                <artifactId>notify-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xmy.notify</groupId>
+                <artifactId>notify-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xmy.notify</groupId>
+                <artifactId>notify-channel-email</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.xmy</groupId>
+            <artifactId>framework-starter</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
 </project>

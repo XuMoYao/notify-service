@@ -9,13 +9,13 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.xmy.notify</groupId>
     <artifactId>notify-channel-email</artifactId>
 
-    <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
+    <dependencies>
+        <!-- 内部模块（版本在父 pom 的 dependencyManagement 里，不用写） -->
+        <dependency>
+            <groupId>com.xmy.notify</groupId>
+            <artifactId>notify-core</artifactId>
+        </dependency>
+    </dependencies>
 </project>

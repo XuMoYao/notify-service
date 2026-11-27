@@ -9,9 +9,55 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.xmy.notify</groupId>
     <artifactId>notify-application</artifactId>
 
+    <dependencies>
+        <!-- 内部模块（版本在父 pom 的 dependencyManagement 里，不用写） -->
+        <dependency>
+            <groupId>com.xmy.notify</groupId>
+            <artifactId>notify-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.xmy.notify</groupId>
+            <artifactId>notify-channel-email</artifactId>
+        </dependency>
 
+        <!-- Web：提供 Controller、内嵌 Tomcat -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>alibabacloud-dm20151123</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>dm20151123</artifactId>
+            <version>1.12.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
